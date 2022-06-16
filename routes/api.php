@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\StateController;
-use App\Http\Controllers\Api\CityController;
+use App\Http\Controllers\Api\StateController;
 
 
 /*
@@ -22,7 +22,6 @@ Route::controller(RegisterController::class)->group(function(){
     Route::post('register', 'register');
     Route::post('login', 'login');
 });
-
 
 Route::middleware('auth:sanctum')->controller(StateController::class)->group(function(){
     Route::get('state', 'index');
